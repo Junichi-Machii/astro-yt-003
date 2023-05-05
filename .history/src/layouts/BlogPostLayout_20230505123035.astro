@@ -1,0 +1,25 @@
+---
+
+//component import
+import MainLayout from './MainLayout.astro';
+
+
+const { frontmatter } = Astro.props;
+const { title, description, date, category, author, image } = frontmatter;
+---
+
+
+<MainLayout  {title} {description}>
+  <header>
+    <div class="container">
+      sm
+    </div>
+    <img src="" alt="">
+  </header>
+  <div class="port-content">
+    <div class="content">
+      <slot />
+    </div>
+    <div class="sidebar"></div>
+  </div>
+</MainLayout>
