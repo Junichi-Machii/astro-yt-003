@@ -1,0 +1,13 @@
+---
+
+// conponent imports
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const allPosts = await Astro.glob("./*.md");
+---
+
+<MainLayout title="home">
+  {
+    allPosts.map((post) => <)
+  }
+</MainLayout>

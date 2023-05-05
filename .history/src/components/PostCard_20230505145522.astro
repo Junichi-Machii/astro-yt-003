@@ -1,0 +1,12 @@
+---
+//library imports
+import { Image } from "@astrojs/image/components";
+
+// utils imports
+import { slugify, formatDate } from "../js/utils";
+
+
+const {post} = Astro.props;
+---
+
+<p>{post.frontmatter.title}</p>
