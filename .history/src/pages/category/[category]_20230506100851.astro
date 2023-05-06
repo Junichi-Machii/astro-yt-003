@@ -1,0 +1,16 @@
+---
+
+import {  } from "../../js/utils";
+
+export async function getStaticPaths() {
+  return [
+    { 
+      params: { category: "Reference" },
+      props: {},
+    },
+  ];
+}
+
+const { tag } = Astro.params;
+const { tag } = Astro.props;
+---

@@ -204,8 +204,7 @@ body {
 h1 span {
   color: hsl(var(--accent));
 }
-
-h2 span {
+h1 span {
   color: hsl(var(--accent));
 }
 

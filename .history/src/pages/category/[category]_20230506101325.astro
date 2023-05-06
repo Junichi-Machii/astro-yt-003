@@ -1,0 +1,29 @@
+---
+
+import { slugify } from "../../js/utils";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { category: slugify("Reference Docs") },
+      props:  { name: "Reference Docs" },
+    },
+    {
+      params: { category: slugify("General") },
+      props:  { name: "General" },
+    },
+    {
+      params: { category: slugify("CSS") },
+      props:  { name: "CSS" },
+    },
+    {
+      params: { category: slugify("Astro") },
+      props:  { name: "Astro" },
+    },
+  ];
+}
+
+const { category } = Astro.params;
+const { name } = Astro.props;
+---
+

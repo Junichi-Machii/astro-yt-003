@@ -1,0 +1,16 @@
+---
+
+import {  } from "";
+
+export async function getStaticPaths() {
+  return [
+    { 
+      params: { category: "astro" },
+      props: {},
+    },
+  ];
+}
+
+const { tag } = Astro.params;
+const { tag } = Astro.props;
+---
