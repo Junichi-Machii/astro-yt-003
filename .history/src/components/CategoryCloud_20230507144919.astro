@@ -1,0 +1,6 @@
+---
+import { formatBlogPosts } f
+
+const allPosts = await Astro.glob("../pages/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+---

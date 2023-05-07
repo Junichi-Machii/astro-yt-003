@@ -1,0 +1,28 @@
+---
+import { log } from "astro/dist/core/logger/core";
+import { formatBlogPosts } from "../js/utils";
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+const allCategories = formattedPosts.map((cat) => cat.frontmatter.category.toLowerCase()).flat();
+
+const processedCats = allCategories.reduce((acc,
+category) => {
+  // check if the category exists in the acc カテゴリが acc に存在するかどうかを確認
+  const value = acc[category] || 0;
+
+  return {
+    ...acc,
+    [category]: value + 1
+  }
+}, {})
+
+const { showCount } = Astro.props;
+
+---
+
+<ul class="categories">
+  {
+    Object.entries(processedCats).map
+  }
+</ul>

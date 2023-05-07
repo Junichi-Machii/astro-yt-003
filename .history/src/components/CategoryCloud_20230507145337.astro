@@ -1,0 +1,11 @@
+---
+import { log } from "astro/dist/core/logger/core";
+import { formatBlogPosts } from "../js/utils";
+
+const allPosts = await Astro.glob("../pages/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+const allCategories = formattedPosts.map((cat) => cat.frontmatter.category.toLowerCase()).flat();
+
+console.log(all);
+
+---
