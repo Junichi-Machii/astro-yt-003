@@ -1,0 +1,62 @@
+---
+
+//library imports
+import { Image } from "@astrojs/image/components";
+import Link from "./Link.astro";
+
+// utils imports
+import { slugify, formatDate } from "../js/utils";
+
+const { frontmatter, url, tagType } = Astro.props;
+
+const Tag = tagType;
+
+const { title, date, author, image, description, category} = frontmatter;
+
+const applyTextLimit = () => {
+  let maxLength = 50; //上限文字数
+  let limitedText = document.getElementById('limited-text');
+  let originalText = limitedText.innerText;
+  if (originalText.length > maxLength) {
+    limitedText.innerText = originalText.substr(0, maxLength) + '...';
+  }
+}
+applyTextLimit();
+---
+
+
+
+<article class="card">
+    <small>
+      <a href={`/category/${slugify(category)}/`}
+      class="badge">{category}</a>
+    </small>
+    <a href={url} aria-hidden="true" tabindex="-1">
+      <Image 
+    src={image.src} 
+    alt={image.alt}
+    width="400"
+    height="250"
+    format="webp"
+    fit="cover"
+    quality={80}
+    aspectRatio="4:1"
+    />
+    </a>
+    <div class="content">
+      <div>
+        <Tag class="h3">
+          <a href={url}>{title}</a>
+        </Tag>
+        <small>by <a href={`/author/${slugify(author)}/`}>{author}</a>
+        ・ {formatDate(date)}
+        </small>
+      </div>
+      <p id="">{description}</p>
+      <Link 
+        href={url}
+        text="Read post"
+        style="secondary"
+      />
+    </div>
+</article>
