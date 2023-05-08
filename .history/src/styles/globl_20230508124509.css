@@ -669,11 +669,11 @@ header {
 
 .search-box button {
   position: absolute;
-  top: 0.8rem;
-  right: 0.9rem;
+  top: 0.9rem;
+  right: 0;
   cursor: pointer;
-  /* padding: 1rem; */
-  /* border-radius: 1.5rem; */
+  padding: 1.rem;
+  border-radius: 0 1.5rem 1.5rem 0;
   border: none;
   background: none;
   color: #333;
@@ -683,7 +683,7 @@ header {
 
 .search-box input:focus {
   outline: 0;
-  /* box-shadow: 0 0 5px #e1e1e1, 0 0 10px #e1e1e1, 0 0 15px #e1e1e1; */
+  box-shadow: 0 0 5px #e1e1e1, 0 0 10px #e1e1e1, 0 0 15px #e1e1e1;
 }
 
 .search-box button:hover {

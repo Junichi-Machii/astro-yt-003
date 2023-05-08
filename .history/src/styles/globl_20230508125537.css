@@ -669,7 +669,7 @@ header {
 
 .search-box button {
   position: absolute;
-  top: 0.8rem;
+  top: 0.rem;
   right: 0.9rem;
   cursor: pointer;
   /* padding: 1rem; */
