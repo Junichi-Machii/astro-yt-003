@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://machijunblog.netlify.app',
+  site: 'https://machijunblog-.netlify.app',
   integrations: [image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), sitemap({

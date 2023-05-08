@@ -452,7 +452,7 @@ button {
   }
 }
 
-.post-container.policy {
+.post-container .policy {
   grid-template-columns: none;
 }
 

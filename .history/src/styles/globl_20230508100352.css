@@ -452,8 +452,8 @@ button {
   }
 }
 
-.post-container.policy {
-  grid-template-columns: none;
+.post-container .policy {
+  grid-template-rows: auto;
 }
 
 .badge {
