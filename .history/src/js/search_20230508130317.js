@@ -1,5 +1,5 @@
 function buttonClick(){
-  url = 'https://www.google.co.jp/search?q="+' + nameText.value + ' site:https://www.machijunblog.netlify.app+"';
+  url = 'https://www.google.co.jp/search?q="+' + nameText.value + ' site:machijunblog.netlify.app+"';
 window.open(url, '_blank')
 }
 
