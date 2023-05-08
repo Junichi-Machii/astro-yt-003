@@ -1,0 +1,8 @@
+{
+  "title": "machijunblog",
+  "description": "",
+  "image": {
+    "src": "/images/image-default.jpg",
+    "alt": "My Astro Blog"
+  }
+}

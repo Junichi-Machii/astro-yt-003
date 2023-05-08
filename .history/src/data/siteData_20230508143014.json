@@ -1,0 +1,8 @@
+{
+  "title": "machijunblog",
+  "description": "My musings about the Astro framewor",
+  "image": {
+    "src": "/images/image-default.jpg",
+    "alt": "My Astro Blog"
+  }
+}

@@ -2,7 +2,7 @@
 
 // conmponent imports
 import Seo from "../components/Seo.astro";
-const { title, description, image, frontmatter, robots } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <head>
@@ -16,7 +16,7 @@ const { title, description, image, frontmatter, robots } = Astro.props;
   <Seo 
     {title}
     {description}
-    url = {Astro.url}
+    url = Astro.URL
     {image}
     {frontmatter}
     {robots}
