@@ -2,9 +2,9 @@ import { defineConfig } from 'astro/config';
 import image from "@astrojs/image";
 import rehypeExternalLinks from 'rehype-external-links';
 
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
   integrations: [image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), sitemap({
-    filter: (page) => page !== "https://machijunblog.netlify.app/about/"
+    filter: page => page !== "https://machijunblog.netlify.app/about/"
   })],
   markdown: {
     rehypePlugins: [[rehypeExternalLinks, {
