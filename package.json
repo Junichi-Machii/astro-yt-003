@@ -24,6 +24,7 @@
     "sharp": "^0.32.1"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^1.2.1",
     "sass": "^1.62.1"
   }
 }

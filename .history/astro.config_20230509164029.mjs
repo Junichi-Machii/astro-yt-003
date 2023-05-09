@@ -17,7 +17,6 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }),
-    
     image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), sitemap({

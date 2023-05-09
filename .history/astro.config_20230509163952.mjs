@@ -10,21 +10,18 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://machijunblog.netlify.app',
-  integrations: [
-    partytown({
+  integrations: [image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), sitemap({
+    filter: page => page !== "https://machijunblog.netlify.app/about/"
+  })],
+
+  partytown({
       // Adds dataLayer.push as a forwarding-event.
       config: {
         forward: ["dataLayer.push"],
       },
     }),
-    
-    image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), sitemap({
-    filter: page => page !== "https://machijunblog.netlify.app/about/"
-  })],
-  
-
 
   markdown: {
     rehypePlugins: [[rehypeExternalLinks, {

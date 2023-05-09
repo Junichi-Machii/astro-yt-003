@@ -11,12 +11,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: 'https://machijunblog.netlify.app',
   integrations: [
-    partytown({
-      // Adds dataLayer.push as a forwarding-event.
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
     
     image({
     serviceEntryPoint: '@astrojs/image/sharp'
