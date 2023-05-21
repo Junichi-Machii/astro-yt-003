@@ -1,0 +1,33 @@
+---
+// component imports
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Contact" description="contact Page" >
+  <div
+  class="container"
+  style={{
+    display: "grid",
+    placeItems: "center",
+    textAlign: "center",
+    gap: "var(--space-sm)",
+  }}
+>
+  <div>
+    <h2 class="h2">Thank you!</h2>
+    <p>Your sub</p>
+  </div>
+  <Link
+    href="/"
+    style="secondary"
+    text="Go Home"
+    icon={{
+      name: "tabler:home",
+      side: "right",
+    }}
+  />
+</div>
+</MainLayout>
+
+<script async src="https://www.google.com/recaptcha/api.js"></script>
