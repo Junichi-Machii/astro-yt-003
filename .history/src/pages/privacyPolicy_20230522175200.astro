@@ -1,0 +1,56 @@
+---
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
+
+import PostCard from "../components/PostCard.astro";
+import Link from "../components/Link.astro";
+
+// utils imports
+import { formatBlogPosts } from "../js/utils";
+
+const allPosts = await Astro.glob("./blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+  limit: 3,
+});
+---
+
+<MainLayout title="Privacy Policy">
+  <section class="container" aria-label="Privacy Policy">
+    <h2 class="h1">Earnings Disclaimer and Privacy Policy</h2>
+    <div class="post-container policy">
+
+     
+                                  <p>プライバシーに関するお問い合わせ</p>
+                                  <p>
+                                    当サイトのプライバシーポリシーに関するお問い合わせや苦情がある場合は、以下の連絡先までご連絡ください。可能な限り迅速に対応いたします。
+                                  </p>
+                                  <p>[連絡先情報をここに記入]</p>
+                                  <h2 class="h2">Contacting Us</h2>
+                                  <p>
+                                    If you have any questions about this Privacy
+                                    Policy, or the practices of this Site,
+                                    please contact us at:
+                                  </p>
+                                  <p>
+                                    Junichi Machii<br />
+                                    Okada,5-11-4-301<br />
+                                    Atsugi,Kanagawa,#243-0021
+                                  </p>
+                                  <p>Updated May 6, 2023</p>
+                                </ul>
+                              </li>
+                            </li>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </li>
+              </li>
+            </li>
+          </ul>
+        </ul>
+      </ul>
+    </div>
+  </section>
+</MainLayout>

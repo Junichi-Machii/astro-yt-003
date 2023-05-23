@@ -1,0 +1,82 @@
+---
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
+
+import PostCard from "../components/PostCard.astro";
+import Link from "../components/Link.astro";
+
+// utils imports
+import { formatBlogPosts } from "../js/utils";
+
+const allPosts = await Astro.glob("./blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+  limit: 3,
+});
+---
+
+<MainLayout title="Privacy Policy">
+  <section class="container" aria-label="Privacy Policy">
+    <h2 class="h1">Earnings Disclaimer and Privacy Policy</h2>
+    <div class="post-container policy">
+      <h1>プライバシーポリシー</h1>
+      <p>
+        当ウェブサイトのプライバシーポリシーには、個人情報の収集、利用、保護に関する情報が記載されています。本ポリシーにご同意いただけない場合は、当サイトの利用を中止してください。
+      </p>
+
+      <h2>1. 収集する情報</h2>
+      <p>...</p>
+
+      <h2>2. 個人情報の利用</h2>
+      <p>...</p>
+
+      <h2>3. データの保存とセキュリティ</h2>
+      <p>...</p>
+
+      <h2>4. 第三者への開示</h2>
+      <p>...</p>
+
+      <h2>5. リンク先のウェブサイト</h2>
+      <p>...</p>
+
+      <h2>6. 個人情報の管理</h2>
+      <p>...</p>
+
+      <h2>7. Cookie（クッキー）の利用</h2>
+      <p>...</p>
+
+      <h2>8. Google Analytics</h2>
+      <p>...</p>
+
+      <h2>9. Google AdSense</h2>
+      <p>...</p>
+
+      <h2>10. アフィリエイトプログラム</h2>
+      <p>...</p>
+
+      <h2>11. 広告の表示</h2>
+      <p>...</p>
+
+      <h2>12. セキュリティ</h2>
+      <p>...</p>
+
+      <h2>13. 国際データ転送</h2>
+      <p>...</p>
+
+      <h2>14. プライバシーポリシーの変更通知</h2>
+      <p>...</p>
+
+      <h2>15. 本プライバシーポリシーの言語</h2>
+      <p>...</p>
+
+      <h2>16. 合意と同意撤回</h2>
+      <p>...</p>
+
+      <h2>17. 未解決の問題</h2>
+      <p>...</p>
+
+      <h2>18. プライバシーポリシーの効力</h2>
+      <p>...</p>
+      <p>Updated May 6, 2023</p>
+    </div>
+  </section>
+</MainLayout>

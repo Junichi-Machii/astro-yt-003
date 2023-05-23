@@ -1,0 +1,51 @@
+---
+// component import
+import MainHead from "./MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+
+//style import
+import "../styles/globl.css";
+
+const {
+  title = "machijunblog is inspiration",
+  description = "Provide useful information to people. I hope that it will lead to your inspiration.",
+  image,
+  frontmatter,
+  robots
+} = Astro.props;
+---
+
+<html lang="en">
+  <MainHead {title} {description} {image} {frontmatter} {robots}/>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5J3WJT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <Nav />
+    <main>
+      <slot> Default Text</slot>
+    </main>
+    <Footer />
+
+    <script>
+
+      declare global {
+
+        in
+      }
+
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
+  </body>
+</html>
