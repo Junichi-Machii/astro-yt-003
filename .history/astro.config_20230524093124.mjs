@@ -4,10 +4,7 @@ import image from "@astrojs/image";
 import rehypeExternalLinks from 'rehype-external-links';
 import sitemap from "@astrojs/sitemap";
 
-import CMS from 'netlify-cms'
 
-// Now the registry is available via the CMS object.
-CMS.registerPreviewTemplate('my-template', MyTemplate)
 
 
 // https://astro.build/config
